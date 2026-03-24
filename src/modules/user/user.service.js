@@ -2,7 +2,6 @@ import { compare, hash } from 'bcrypt'
 import { EMAIL_APP, SALT_ROUND } from '../../../config/config.service.js'
 import { ProviderEnum } from '../../common/enum/provider/enum.js'
 import { userModel, users } from '../../DB/model/index.js'
-import { tokenModel } from '../../DB/model/token.model.js'
 import { delete1, get1, keys, set } from '../../DB/redis/resis.service.js'
 import { generateOtpAndSendEmail } from '../auth/auth.service.js'
 export const profile = async (id) => {

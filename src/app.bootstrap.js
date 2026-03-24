@@ -8,6 +8,7 @@ import { connectRedis, redisClient } from './DB/redis.connection.DB.js'
 import { get1, set } from './DB/redis/resis.service.js'
 import { get } from 'node:http'
 import { sendEmail } from './common/utils/sendEmail.js'
+import { messageRouter } from './modules/message/message.controller.js'
 
 async function bootstrap() {
     const app = express()
@@ -21,6 +22,7 @@ async function bootstrap() {
     app.get('/', (req, res) => res.send('Hello World!'))
     app.use('/auth', authRouter)
     app.use('/user', userRouter)
+        app.use('/message', messageRouter)
 
 
 

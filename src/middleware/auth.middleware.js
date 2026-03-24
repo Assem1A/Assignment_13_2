@@ -1,5 +1,4 @@
 import { JWT_SECRET } from "../../config/config.service.js";
-import { tokenModel } from "../DB/model/token.model.js";
 import { userModel } from "../DB/model/user.model.js";
 import jwt from 'jsonwebtoken'
 import { get1 } from "../DB/redis/resis.service.js";
